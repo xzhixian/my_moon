@@ -6,11 +6,11 @@ class Birds
 class Fish
   yo: "I can swim !"
   new: =>
-    @yo = {}
+    @yo = {""}
 
 class CatFish extends Fish
-    say: ->
-    print @yo
+  say: =>
+    print item for item in *@yo
 
 cf = CatFish!
 cf\say!
